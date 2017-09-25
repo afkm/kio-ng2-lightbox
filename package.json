@@ -1,0 +1,45 @@
+{
+	"name": "kio-ng2-lightbox",
+	"version": "0.0.0",
+	"description": "component and service for kio ng2 lightbox",
+	"main": "./release/module.js",
+	"scripts": {
+		"test": "ts-mocha ./src/**/*.spec.ts",
+		"pretest": "npm run build",
+		"test:watch": "./scripts/watch.sh test",
+		"lint": "tslint ./src/**/*.ts ./test/**/*.ts",
+		"version": "npm run build",
+		"postversion": "git push && git push --tags",
+		"predoc": "rm -rf ./documentation",
+		"doc": "compodoc -p ./tsconfig-doc.json -d ./documentation/",
+		"sass:build": "./scripts/compile-scss.sh ./build",
+		"transpile": "npm run ngModule:build",
+		"ngModule:build": "./scripts/ngModule.sh build",
+		"ngModule:copy_build": "./scripts/ngModule.sh copy_build",
+		"ngModule:copy": "./scripts/sync_to.sh ../../digit-wmr",
+		"fetchdeps": "echo ./scripts/sync_kio_module.sh component-routing ctn i18n",
+		"build": "npm run ngModule:copy_build && npm run sass:build && npm run ngModule:build && npm run ngModule:copy",
+		"build:dev": "npm run fetchdeps && NODE_ENV=production npm run build",
+		"build:release": "NODE_ENV=production npm run build",
+		"build:release:watch": "./scripts/watch.sh build:release"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/afkm/kio-ng2-lightbox.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/afkm/kio-ng2-lightbox/issues"
+	},
+	"homepage": "https://github.com/afkm/kio-ng2-lightbox#readme",
+	"module": "./release/module.js",
+	"typings": "./release/module.d.ts",
+	"peerDependencies": {
+		"js": "^0.8.17"
+	},
+	"devDependencies": {
+		"js": "^0.8.17"
+	}
+}
