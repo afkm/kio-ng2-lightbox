@@ -1,4 +1,5 @@
 /aot
 
-release/**/*.ngfactory.ts
+/release/**/*.ngfactory.ts
+
 /node_modules

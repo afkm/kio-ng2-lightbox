@@ -14,7 +14,7 @@
   },
 
   "files": [
-    "build/module.ts"
+    "build/lightbox.module.ts"
   ],
 
   "angularCompilerOptions": {

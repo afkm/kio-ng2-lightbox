@@ -1,0 +1,12 @@
+<!-- <component-router componentName="image" *ngIf="imageNode" (load)="onImageLoad()" [viewParams]="viewParams" [node]="imageNode"></component-router>
+
+<figcaption *ngIf="textNode" (click)="showMeta = !showMeta" [ngClass]="{'has-meta' : !!(metaNode)}">
+
+    <component-router componentName="formatted-text" *ngIf="textNode" [node]="textNode"></component-router>
+
+    <span *ngIf="!!(metaNode)" class="meta" [hidden]="!(showMeta)">
+        <component-router componentName="simple-text" *ngIf="metaNode" [node]="metaNode"></component-router>
+    </span>
+
+</figcaption> -->
+<component-router componentName="labeled-image" *ngIf="contentNode" [node]="contentNode" [viewParams]="viewParams"></component-router>
