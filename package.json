@@ -1,6 +1,6 @@
 {
 	"name": "kio-ng2-lightbox",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "component and service for kio ng2 lightbox",
 	"main": "./release/lightbox.module",
 	"module": "./release/lightbox.module",
