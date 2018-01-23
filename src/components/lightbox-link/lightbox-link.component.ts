@@ -18,7 +18,7 @@ const findDOMUp = ( element:HTMLElement, matcher:{(el:HTMLElement):boolean} ):HT
 @Component({
   selector: 'lightbox-link',
   templateUrl: './lightbox-link.component.html',
-  styleUrls: ['./lightbox-link.component.css']
+  styleUrls: ['./lightbox-link.component.scss']
 })
 export class LightboxLinkComponent implements AfterViewInit {
 
@@ -29,7 +29,7 @@ export class LightboxLinkComponent implements AfterViewInit {
 
   }
 
-  @Input('node') node:KioContentModel|KioFragmentModel
+  @Input() node:KioContentModel|KioFragmentModel
   @Input('componentName') componentName:string
   @Input('viewParams') viewParams:ViewParams
 
